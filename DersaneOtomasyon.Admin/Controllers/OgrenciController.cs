@@ -44,7 +44,38 @@ namespace DersaneOtomasyon.Admin.Controllers
 
             return RedirectToAction("Index");
         }
-     
+
+        public ActionResult Edit(int? id)
+        {
+            AlanDoldur();
+            var ogr = _OgrenciRepository.GetById(id.Value);
+
+            if (ogr==null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(ogr);
+        }
+
+        [HttpPost,ValidateAntiForgeryToken]
+        public ActionResult Edit(int? id,Ogrenci ogr)
+        {
+            if (id==null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var get = _OgrenciRepository.GetById(id.Value);
+            if (get==null)
+            {
+                return HttpNotFound();
+            }
+            _OgrenciRepository.Update(ogr);
+            _OgrenciRepository.Save();
+            return RedirectToAction("Index");
+        }
+
         private  void AlanDoldur(object nesne = null)
         {
             var alanList = _AlanRepository.GetAll().ToList();

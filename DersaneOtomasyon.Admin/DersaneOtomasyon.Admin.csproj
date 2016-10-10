@@ -230,6 +230,7 @@
     <Content Include="Views\Alan\Index.cshtml" />
     <Content Include="Views\Ogrenci\Index.cshtml" />
     <Content Include="Views\Ogrenci\Create.cshtml" />
+    <Content Include="Views\Ogrenci\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
