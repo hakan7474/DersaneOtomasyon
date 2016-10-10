@@ -26,7 +26,7 @@ namespace DersaneOtomasyon.Admin.Bootstrapper
 
             build.RegisterType<OkulRepository>().As<IOkulRepository>();
             build.RegisterType<AlanRepository>().As<IAlanRepository>();
-            build.RegisterType<ilRepository>().As<IilRepository>();
+         
             build.RegisterType<OdemeRepository>().As<IOdemeRepository>();
             build.RegisterType<OgrenciRepository>().As<IOgrenciRepository>();
             build.RegisterType<OgrenciResimRepository>().As<IOgrenciResimRepository>();

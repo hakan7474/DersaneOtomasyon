@@ -33,8 +33,7 @@ namespace DersaneOtomasyon.Data.Model
         public virtual Alan Alan { get; set; }
 
 
-
-        public virtual ICollection<Il> Ils { get; set; }
+ 
 
         public virtual ICollection<Odeme> Odemes { get; set; }
 

@@ -25,8 +25,7 @@ namespace DersaneOtomasyon.Core.Repository
             if (find != null)
             {
                 _context.Ogrenci.Remove(find);
-            }
-
+            } 
         }
 
         public Ogrenci Get(Expression<Func<Ogrenci, bool>> epression)

@@ -34,6 +34,6 @@ namespace DersaneOtomasyon.Admin.Controllers
             return View(context);
         }
 
-        
+    
     }
 }

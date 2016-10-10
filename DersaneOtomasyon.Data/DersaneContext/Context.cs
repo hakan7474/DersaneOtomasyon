@@ -14,8 +14,7 @@ namespace DersaneOtomasyon.Data.DersaneContext
     {
 
         public DbSet<Alan> Alan { get; set; }
-
-        public DbSet<Il> Il { get; set; }
+ 
 
         public DbSet<Odeme> Odeme { get; set; }
 
