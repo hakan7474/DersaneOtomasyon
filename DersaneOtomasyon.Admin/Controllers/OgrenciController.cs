@@ -13,33 +13,44 @@ namespace DersaneOtomasyon.Admin.Controllers
     {
         private readonly IOgrenciRepository _OgrenciRepository;
 
-        public OgrenciController(IOgrenciRepository ogrenciRepository)
+        private readonly IAlanRepository _AlanRepository;
+        public OgrenciController(IOgrenciRepository ogrenciRepository,IAlanRepository alanRepository)
         {
             _OgrenciRepository = ogrenciRepository;
+            _AlanRepository = alanRepository;
         }
 
         public ActionResult Index()
         {
-            var school = _OgrenciRepository.GetAll().ToList();
+            var school = _OgrenciRepository.GetAll().ToList().OrderBy(x=>x.OgrenciAdi).ToList();
             return View(school);
         }
 
         public ActionResult Create()
         {
+            AlanDoldur();
             return View();
         }
-
         [HttpPost,ValidateAntiForgeryToken]
-        public ActionResult Create(Ogrenci ogrenci)
+        public ActionResult Create(Ogrenci ogr)
         {
             if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-         
-            _OgrenciRepository.Insert(ogrenci);
+
+            _OgrenciRepository.Insert(ogr);
             _OgrenciRepository.Save();
+
             return RedirectToAction("Index");
+        }
+     
+        private  void AlanDoldur(object nesne = null)
+        {
+            var alanList = _AlanRepository.GetAll().ToList();
+            var selectList = new SelectList(alanList, "AlanId", "SinifAdi", nesne);
+
+            ViewData.Add("AlanId", selectList);
         }
     }
 }

@@ -9,18 +9,23 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.SinifAdi)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinifAdi)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.SinifAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(model=>item.SinifMevcut)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AlanId }) |

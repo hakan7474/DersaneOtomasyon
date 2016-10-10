@@ -66,6 +66,14 @@
     <Compile Include="Migrations\201610100220081_sinifmevcut.Designer.cs">
       <DependentUpon>201610100220081_sinifmevcut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610100309211_sinifmevcuts.cs" />
+    <Compile Include="Migrations\201610100309211_sinifmevcuts.Designer.cs">
+      <DependentUpon>201610100309211_sinifmevcuts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610100314080_sinifmevcuts1.cs" />
+    <Compile Include="Migrations\201610100314080_sinifmevcuts1.Designer.cs">
+      <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -91,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610100220081_sinifmevcut.resx">
       <DependentUpon>201610100220081_sinifmevcut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610100309211_sinifmevcuts.resx">
+      <DependentUpon>201610100309211_sinifmevcuts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610100314080_sinifmevcuts1.resx">
+      <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

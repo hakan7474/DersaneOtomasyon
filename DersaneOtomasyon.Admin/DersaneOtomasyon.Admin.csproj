@@ -226,10 +226,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Ogrenci\Index.cshtml" />
-    <Content Include="Views\Ogrenci\Create.cshtml" />
     <Content Include="Views\Alan\Create.cshtml" />
     <Content Include="Views\Alan\Index.cshtml" />
+    <Content Include="Views\Ogrenci\Index.cshtml" />
+    <Content Include="Views\Ogrenci\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

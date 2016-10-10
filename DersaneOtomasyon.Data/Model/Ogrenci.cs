@@ -17,10 +17,8 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         public string Soyadi { get; set; }
        
-        [Required]
-        public DateTime DogumTarihi { get; set; }
-        [Required]
-        public DateTime KayitTarihi { get; set; }
+       
+       
     
         public bool AktifMi { get; set; }
 
