@@ -76,6 +76,24 @@ namespace DersaneOtomasyon.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Details(int? id)
+        {
+            if (id == null )
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var query = _OgrenciRepository.GetById(id.Value);
+           
+
+            if (query == null)
+                return HttpNotFound();
+
+            return View(query);
+
+        }
+
+        
         private  void AlanDoldur(object nesne = null)
         {
             var alanList = _AlanRepository.GetAll().ToList();

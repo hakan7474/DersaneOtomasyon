@@ -74,6 +74,10 @@
     <Compile Include="Migrations\201610100314080_sinifmevcuts1.Designer.cs">
       <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610121624308_tc.cs" />
+    <Compile Include="Migrations\201610121624308_tc.Designer.cs">
+      <DependentUpon>201610121624308_tc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -105,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610100314080_sinifmevcuts1.resx">
       <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610121624308_tc.resx">
+      <DependentUpon>201610121624308_tc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,7 +23,10 @@
         <th>
             @Html.DisplayNameFor(model => model.AktifMi)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tc)
+        </th>
+      
     </tr>
 
 @foreach (var item in Model)
@@ -41,6 +44,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AktifMi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tc)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.OgrenciId }) |

@@ -13,6 +13,9 @@ namespace DersaneOtomasyon.Data.Model
         [Key]
         public int OgrenciId { get; set; }
         [Required]
+        public string Tc { get; set; }
+
+        [Required]
         public string OgrenciAdi { get; set; }
         [Required]
         public string Soyadi { get; set; }

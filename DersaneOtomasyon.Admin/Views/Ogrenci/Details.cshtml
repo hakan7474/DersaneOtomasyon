@@ -1,0 +1,62 @@
+﻿@model DersaneOtomasyon.Data.Model.Ogrenci 
+
+@{
+    ViewBag.Title = "Details";
+}
+
+ 
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+       Öğrencinin Detayları
+    </div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Alan.SinifAdi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Alan.SinifAdi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OgrenciAdi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OgrenciAdi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Soyadi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Soyadi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AktifMi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AktifMi)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Tc)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tc)
+            </dd>
+
+           
+        </dl>
+
+
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.OgrenciId }) |
+    @Html.ActionLink("Listeye Dön", "Index")
+</p>
