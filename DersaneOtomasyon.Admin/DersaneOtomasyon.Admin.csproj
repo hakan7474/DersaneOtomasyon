@@ -227,6 +227,17 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Ogrenci\Index.cshtml" />
+    <Content Include="Views\Ogrenci\Create.cshtml" />
+    <Content Include="Views\Ogrenci\Edit.cshtml" />
+    <Content Include="Views\Ogrenci\Details.cshtml" />
+    <Content Include="Views\Alan\Index.cshtml" />
+    <Content Include="Views\Alan\Create.cshtml" />
+    <Content Include="Views\Alan\Edit.cshtml" />
+    <Content Include="Views\Veli\Index.cshtml" />
+    <Content Include="Views\Veli\Create.cshtml" />
+    <Content Include="Views\Veli\Details.cshtml" />
+    <Content Include="Views\Veli\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

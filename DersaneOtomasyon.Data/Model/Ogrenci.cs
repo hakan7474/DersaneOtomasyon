@@ -19,10 +19,13 @@ namespace DersaneOtomasyon.Data.Model
         public string Okul { get; set; }
 
 
-        public virtual Veli Veli { get; set; }
+        public virtual ICollection<Odeme> Odeme { get; set; }
 
-        public virtual List<Odeme> Odeme { get; set; }
+        public virtual ICollection<Veli> Veli { get; set; }
 
-        public virtual Alan Alan { get; set;}
+        [Required]
+        public int AlanId { get; set; }
+        
+        public virtual Alan Alan { get; set; }
     }
 }

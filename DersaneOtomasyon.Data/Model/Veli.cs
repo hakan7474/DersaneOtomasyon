@@ -11,13 +11,15 @@ namespace DersaneOtomasyon.Data.Model
     {
         [Key]
         public int VeliId { get; set; }
-
+        [Required]
         public string VeliAdi { get; set; }
-
+        [Required]
         public string VeliAdres { get; set; }
 
 
-        public virtual Ogrenci Ogrenci { get; set; }
+        [Required]
+        public int OgrenciId { get; set; }
 
+        public virtual Ogrenci Ogrenci { get; set; }
     }
 }

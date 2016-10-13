@@ -15,8 +15,8 @@ namespace DersaneOtomasyon.Data.Model
         public string AlanAdi { get; set; }
         [Required]
         public string AlanAciklama { get; set; }
+         
 
-
-        public virtual List<Ogrenci> Ogrenci { get; set; }
-    }
+        public virtual ICollection<Ogrenci> Ogrenci { get; set; }
+     }
 }

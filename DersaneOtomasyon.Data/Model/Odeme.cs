@@ -18,6 +18,9 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         public int ToplamUcret { get; set; }
 
+         [Required]
+        public int OgrenciId { get; set; }
+
         public virtual Ogrenci Ogrenci { get; set; }
     }
 }

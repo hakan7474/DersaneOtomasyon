@@ -24,12 +24,12 @@ namespace DersaneOtomasyon.Admin.Bootstrapper
 
             build.RegisterControllers(typeof(MvcApplication).Assembly) ;
 
-            build.RegisterType<OkulRepository>().As<IOkulRepository>();
+           
             build.RegisterType<AlanRepository>().As<IAlanRepository>();
          
             build.RegisterType<OdemeRepository>().As<IOdemeRepository>();
             build.RegisterType<OgrenciRepository>().As<IOgrenciRepository>();
-            build.RegisterType<OgrenciResimRepository>().As<IOgrenciResimRepository>();
+            
             build.RegisterType<VeliRepositor>().As<IVeliRepository>();
 
 

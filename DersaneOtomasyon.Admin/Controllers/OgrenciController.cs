@@ -34,6 +34,7 @@ namespace DersaneOtomasyon.Admin.Controllers
         [HttpPost,ValidateAntiForgeryToken]
         public ActionResult Create(Ogrenci ogr)
         {
+            
             if (!ModelState.IsValid)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -82,6 +83,7 @@ namespace DersaneOtomasyon.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            
 
             var query = _OgrenciRepository.GetById(id.Value);
            
@@ -97,7 +99,7 @@ namespace DersaneOtomasyon.Admin.Controllers
         private  void AlanDoldur(object nesne = null)
         {
             var alanList = _AlanRepository.GetAll().ToList();
-            var selectList = new SelectList(alanList, "AlanId", "SinifAdi", nesne);
+            var selectList = new SelectList(alanList, "AlanId", "AlanAdi", nesne);
 
             ViewData.Add("AlanId", selectList);
         }
