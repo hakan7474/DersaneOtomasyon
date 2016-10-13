@@ -19,10 +19,7 @@ namespace DersaneOtomasyon.Data.DersaneContext
         public DbSet<Odeme> Odeme { get; set; }
 
         public DbSet<Ogrenci> Ogrenci { get; set; }
-
-        public DbSet<OgrenciResim> OgrenciResim { get; set; }
-
-        public DbSet<Okul> Okul { get; set; }
+ 
 
         public DbSet<Veli> Veli { get; set; }
 

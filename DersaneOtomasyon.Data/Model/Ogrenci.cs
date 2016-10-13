@@ -1,5 +1,4 @@
-﻿using DersaneOtomasyon.Data.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,38 +12,17 @@ namespace DersaneOtomasyon.Data.Model
         [Key]
         public int OgrenciId { get; set; }
         [Required]
-        public string Tc { get; set; }
-
-        [Required]
         public string OgrenciAdi { get; set; }
         [Required]
-        public string Soyadi { get; set; }
-       
-       
-       
-    
-        public bool AktifMi { get; set; }
-
-
-
-
+        public string OgrenciSoyadi { get; set; }
         [Required]
-        public int AlanId { get; set; }
-
-        public virtual Alan Alan { get; set; }
+        public string Okul { get; set; }
 
 
- 
+        public virtual Veli Veli { get; set; }
 
-        public virtual ICollection<Odeme> Odemes { get; set; }
+        public virtual List<Odeme> Odeme { get; set; }
 
-        public virtual ICollection<OgrenciResim> OgrenciResims { get; set; }
-
-        public virtual ICollection<Okul> Okuls { get; set; }
-
-        public virtual ICollection<Veli> Velis { get; set; }
-
+        public virtual Alan Alan { get; set;}
     }
-
-
 }

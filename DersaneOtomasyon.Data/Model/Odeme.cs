@@ -12,16 +12,11 @@ namespace DersaneOtomasyon.Data.Model
         [Key]
         public int OdemeId { get; set; }
         [Required]
-        public int ToplamUcret { get; set; }
- 
+        public string OdemeAciklama { get; set; }
         [Required]
         public int TaksitSayisi { get; set; }
-
-        public bool OdemeAktif { get; set; }
-
-
         [Required]
-        public int OgrenciId { get; set; }
+        public int ToplamUcret { get; set; }
 
         public virtual Ogrenci Ogrenci { get; set; }
     }

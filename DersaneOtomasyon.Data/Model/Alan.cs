@@ -12,10 +12,11 @@ namespace DersaneOtomasyon.Data.Model
         [Key]
         public int AlanId { get; set; }
         [Required]
-        public string SinifAdi { get; set; }
+        public string AlanAdi { get; set; }
         [Required]
-        public int SinifMevcut { get; set; }
-       
-        public virtual ICollection<Ogrenci> Ogrencis { get; set; }
+        public string AlanAciklama { get; set; }
+
+
+        public virtual List<Ogrenci> Ogrenci { get; set; }
     }
 }

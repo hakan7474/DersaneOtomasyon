@@ -50,69 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DersaneContext\Context.cs" />
-    <Compile Include="Migrations\201610092137081_InitialCreate.cs" />
-    <Compile Include="Migrations\201610092137081_InitialCreate.Designer.cs">
-      <DependentUpon>201610092137081_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610100101584_İL.cs" />
-    <Compile Include="Migrations\201610100101584_İL.Designer.cs">
-      <DependentUpon>201610100101584_İL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610100127404_alanadi.cs" />
-    <Compile Include="Migrations\201610100127404_alanadi.Designer.cs">
-      <DependentUpon>201610100127404_alanadi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610100220081_sinifmevcut.cs" />
-    <Compile Include="Migrations\201610100220081_sinifmevcut.Designer.cs">
-      <DependentUpon>201610100220081_sinifmevcut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610100309211_sinifmevcuts.cs" />
-    <Compile Include="Migrations\201610100309211_sinifmevcuts.Designer.cs">
-      <DependentUpon>201610100309211_sinifmevcuts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610100314080_sinifmevcuts1.cs" />
-    <Compile Include="Migrations\201610100314080_sinifmevcuts1.Designer.cs">
-      <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610121624308_tc.cs" />
-    <Compile Include="Migrations\201610121624308_tc.Designer.cs">
-      <DependentUpon>201610121624308_tc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
     <Compile Include="Model\Ogrenci.cs" />
-    <Compile Include="Model\OgrenciResim.cs" />
-    <Compile Include="Model\Okul.cs" />
     <Compile Include="Model\Veli.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610092137081_InitialCreate.resx">
-      <DependentUpon>201610092137081_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610100101584_İL.resx">
-      <DependentUpon>201610100101584_İL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610100127404_alanadi.resx">
-      <DependentUpon>201610100127404_alanadi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610100220081_sinifmevcut.resx">
-      <DependentUpon>201610100220081_sinifmevcut.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610100309211_sinifmevcuts.resx">
-      <DependentUpon>201610100309211_sinifmevcuts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610100314080_sinifmevcuts1.resx">
-      <DependentUpon>201610100314080_sinifmevcuts1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610121624308_tc.resx">
-      <DependentUpon>201610121624308_tc.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
