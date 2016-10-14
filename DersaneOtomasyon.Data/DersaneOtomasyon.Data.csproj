@@ -66,6 +66,22 @@
     <Compile Include="Migrations\201610140049572_odeme_tarih.Designer.cs">
       <DependentUpon>201610140049572_odeme_tarih.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610140245475_odeme_tarih1.cs" />
+    <Compile Include="Migrations\201610140245475_odeme_tarih1.Designer.cs">
+      <DependentUpon>201610140245475_odeme_tarih1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140330588_od.cs" />
+    <Compile Include="Migrations\201610140330588_od.Designer.cs">
+      <DependentUpon>201610140330588_od.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140359229_tr.cs" />
+    <Compile Include="Migrations\201610140359229_tr.Designer.cs">
+      <DependentUpon>201610140359229_tr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140403402_t.cs" />
+    <Compile Include="Migrations\201610140403402_t.Designer.cs">
+      <DependentUpon>201610140403402_t.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -89,6 +105,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610140049572_odeme_tarih.resx">
       <DependentUpon>201610140049572_odeme_tarih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140245475_odeme_tarih1.resx">
+      <DependentUpon>201610140245475_odeme_tarih1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140330588_od.resx">
+      <DependentUpon>201610140330588_od.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140359229_tr.resx">
+      <DependentUpon>201610140359229_tr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140403402_t.resx">
+      <DependentUpon>201610140403402_t.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

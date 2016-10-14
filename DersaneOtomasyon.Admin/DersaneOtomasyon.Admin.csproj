@@ -178,7 +178,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OdemeController.cs" />
     <Compile Include="Controllers\OgrenciController.cs" />
-    <Compile Include="Controllers\VeliController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -231,9 +230,10 @@
     <Content Include="Views\Alan\Index.cshtml" />
     <Content Include="Views\Alan\Create.cshtml" />
     <Content Include="Views\Alan\Edit.cshtml" />
+    <Content Include="Views\Odeme\Index.cshtml" />
+    <Content Include="Views\Odeme\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Odeme\" />
     <Folder Include="Views\Ogrenci\" />
   </ItemGroup>
   <ItemGroup>

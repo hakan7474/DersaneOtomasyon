@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,9 +18,9 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         public int TaksitNo { get; set; }
         [Required]
-        public int OdenenTutar { get; set; }
-        [Required,DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public int OdemeTarihi { get; set; }
+        public int OdenenTutar { get; set; } 
+
+         
          
         [Required]
         public int OgrenciId { get; set; }

@@ -1,0 +1,49 @@
+﻿@using System.Web.UI.WebControls
+
+@model IEnumerable<DersaneOtomasyon.Data.Model.Odeme>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.SelectedOgrenci.OgrenciAdi Odeme Bilgileri</h2>
+
+<p>@Html.ActionLink("Yeni Ödeme Ekle", "Create", "Odeme", new { id = ViewBag.SelectedOgrenci.OgrenciId }, new { })</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.OdemeAciklama)</th>
+        <th>@Html.DisplayNameFor(model => model.TaksitNo)</th>
+        <th>@Html.DisplayNameFor(model => model.OdenenTutar)</th>
+   
+        <th></th>
+       
+    </tr>
+    @Html.Hidden("selectedOgrenciId", (string)ViewBag.SelectedOgrenci.OgrenciId.ToString(), new { })
+ 
+       @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.OdemeAciklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.TaksitNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.OdenenTutar)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.OdemeId, ogrId = item.OgrenciId })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.OdemeId, ogrId = item.OgrenciId })
+                    @Html.ActionLink("Detaylar", "Details", new { id = item.OdemeId, ogrId = item.OgrenciId })
+                </td>
+            </tr>
+
+
+         
+
+        } 
+
+
+</table>

@@ -17,7 +17,7 @@ namespace DersaneOtomasyon.Data.Model
         public string OgrenciSoyadi { get; set; }
         [Required]
         public string Okul { get; set; }
-        [Required]
+         
         public string OgrenciTc { get; set; }
 
         public virtual ICollection<Odeme> Odeme { get; set; }
