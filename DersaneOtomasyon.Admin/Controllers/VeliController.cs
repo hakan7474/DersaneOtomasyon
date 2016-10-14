@@ -11,77 +11,37 @@ namespace DersaneOtomasyon.Admin.Controllers
 {
     public class VeliController : Controller
     {
-        private readonly IVeliRepository _veliRepository;
-        public VeliController(IVeliRepository veliRepository)
+        private readonly IOdemeRepository _odemeRepository;
+
+        private readonly IOgrenciRepository _ogrenciRepository;
+
+        public VeliController(IOdemeRepository odemeRepository, IOgrenciRepository ogrenciRepository)
         {
-            _veliRepository = veliRepository;
+            _odemeRepository = odemeRepository;
+            _ogrenciRepository = ogrenciRepository;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var list = _veliRepository.GetAll().ToList();
-            return View(list);
-        }
-
-        public ActionResult Create()
-        {
-            AlanDoldur();
-            return View();
-        }
-
-        [HttpPost,ValidateAntiForgeryToken]
-        public ActionResult Create(Veli veli)
-        {
-            _veliRepository.Insert(veli);
-            _veliRepository.Save();
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Edit(int? id)
-        {
-            if (id==null)
+            if (id ==null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var find = _veliRepository.GetById(id.Value);
+            var ogrenci = OgrenciGet(id.Value);
 
-            if (find==null)
-            {
-                return HttpNotFound();
-            }
+            var OgrenciOdeme = ogrenci.Odeme;
 
-            return View(find);
-        }
+            ViewBag.SelectedOgrenci = ogrenci;
 
-        [HttpPost,ValidateAntiForgeryToken]
-        public ActionResult Edit(Veli veli)
-        {
-            _veliRepository.Update(veli);
-            _veliRepository.Save();
-
-            return RedirectToAction("Index");
+            return View(OgrenciOdeme);
         }
 
 
-        public ActionResult Details(int? id)
+        private Ogrenci OgrenciGet(int? id)
         {
-            if (id==null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var find = _veliRepository.GetById(id.Value);
-            return View(find);
-        }
-
-     
-        private void AlanDoldur(object nesne = null)
-        {
-            var alanList = _veliRepository.GetAll().ToList();
-            var selectList = new SelectList(alanList, "OgrenciId", "OgrenciAdi", nesne);
-
-            ViewData.Add("OgrenciId", selectList);
+            var ogrenci = _ogrenciRepository.GetById(id.Value);
+            return ogrenci;
         }
     }
 }

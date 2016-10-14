@@ -54,6 +54,18 @@
     <Compile Include="Migrations\201610131953033_yeni.Designer.cs">
       <DependentUpon>201610131953033_yeni.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610132339358_tc.cs" />
+    <Compile Include="Migrations\201610132339358_tc.Designer.cs">
+      <DependentUpon>201610132339358_tc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140044343_odeme.cs" />
+    <Compile Include="Migrations\201610140044343_odeme.Designer.cs">
+      <DependentUpon>201610140044343_odeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610140049572_odeme_tarih.cs" />
+    <Compile Include="Migrations\201610140049572_odeme_tarih.Designer.cs">
+      <DependentUpon>201610140049572_odeme_tarih.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -68,6 +80,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610131953033_yeni.resx">
       <DependentUpon>201610131953033_yeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610132339358_tc.resx">
+      <DependentUpon>201610132339358_tc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140044343_odeme.resx">
+      <DependentUpon>201610140044343_odeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610140049572_odeme_tarih.resx">
+      <DependentUpon>201610140049572_odeme_tarih.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

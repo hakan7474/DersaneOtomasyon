@@ -15,6 +15,8 @@ namespace DersaneOtomasyon.Data.Model
         public string VeliAdi { get; set; }
         [Required]
         public string VeliAdres { get; set; }
+        [Required]
+        public string VeliTc { get; set; }
 
 
         [Required]

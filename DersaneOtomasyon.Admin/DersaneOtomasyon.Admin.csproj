@@ -176,6 +176,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AlanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OdemeController.cs" />
     <Compile Include="Controllers\OgrenciController.cs" />
     <Compile Include="Controllers\VeliController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,19 +228,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Ogrenci\Index.cshtml" />
-    <Content Include="Views\Ogrenci\Create.cshtml" />
-    <Content Include="Views\Ogrenci\Edit.cshtml" />
-    <Content Include="Views\Ogrenci\Details.cshtml" />
     <Content Include="Views\Alan\Index.cshtml" />
     <Content Include="Views\Alan\Create.cshtml" />
     <Content Include="Views\Alan\Edit.cshtml" />
-    <Content Include="Views\Veli\Index.cshtml" />
-    <Content Include="Views\Veli\Create.cshtml" />
-    <Content Include="Views\Veli\Details.cshtml" />
-    <Content Include="Views\Veli\Edit.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Odeme\" />
+    <Folder Include="Views\Ogrenci\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
