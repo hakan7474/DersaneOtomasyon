@@ -18,7 +18,8 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         public int TaksitNo { get; set; }
         [Required]
-        public int OdenenTutar { get; set; } 
+        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
+        public double OdenenTutar { get; set; } 
 
          
          

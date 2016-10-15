@@ -21,7 +21,7 @@
     @Html.Hidden("selectedOgrenciId", (string)ViewBag.SelectedOgrenci.OgrenciId.ToString(), new { })
  
        @foreach (var item in Model)
-        {
+       {
             <tr>
                 <td>
                     @Html.DisplayFor(model => item.OdemeAciklama)

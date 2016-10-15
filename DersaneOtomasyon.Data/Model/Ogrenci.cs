@@ -17,8 +17,11 @@ namespace DersaneOtomasyon.Data.Model
         public string OgrenciSoyadi { get; set; }
         [Required]
         public string Okul { get; set; }
-         
+         [Required]
         public string OgrenciTc { get; set; }
+        [Required]
+        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
+        public double Fiyat { get; set; }
 
         public virtual ICollection<Odeme> Odeme { get; set; }
 
