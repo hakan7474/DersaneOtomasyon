@@ -14,7 +14,7 @@ namespace DersaneOtomasyon.Admin.Controllers
         private readonly IOgrenciRepository _OgrenciRepository;
 
         private readonly IAlanRepository _AlanRepository;
-        public OgrenciController(IOgrenciRepository ogrenciRepository,IAlanRepository alanRepository)
+        public OgrenciController(IOgrenciRepository ogrenciRepository, IAlanRepository alanRepository)
         {
             _OgrenciRepository = ogrenciRepository;
             _AlanRepository = alanRepository;
@@ -22,7 +22,7 @@ namespace DersaneOtomasyon.Admin.Controllers
 
         public ActionResult Index()
         {
-            var school = _OgrenciRepository.GetAll().ToList().OrderBy(x=>x.OgrenciAdi).ToList();
+            var school = _OgrenciRepository.GetAll().ToList().OrderBy(x => x.OgrenciAdi).ToList();
             return View(school);
         }
 
@@ -31,27 +31,30 @@ namespace DersaneOtomasyon.Admin.Controllers
             AlanDoldur();
             return View();
         }
-        [HttpPost,ValidateAntiForgeryToken]
+
+        [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Create(Ogrenci ogr)
         {
-            
+
             if (!ModelState.IsValid)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
             _OgrenciRepository.Insert(ogr);
             _OgrenciRepository.Save();
 
             return RedirectToAction("Index");
         }
 
+
+
+
         public ActionResult Edit(int? id)
         {
             AlanDoldur();
             var ogr = _OgrenciRepository.GetById(id.Value);
 
-            if (ogr==null)
+            if (ogr == null)
             {
                 return HttpNotFound();
             }
@@ -59,16 +62,16 @@ namespace DersaneOtomasyon.Admin.Controllers
             return View(ogr);
         }
 
-        [HttpPost,ValidateAntiForgeryToken]
-        public ActionResult Edit(int? id,Ogrenci ogr)
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Edit(int? id, Ogrenci ogr)
         {
-            if (id==null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
             var get = _OgrenciRepository.GetById(id.Value);
-            if (get==null)
+            if (get == null)
             {
                 return HttpNotFound();
             }
@@ -79,14 +82,14 @@ namespace DersaneOtomasyon.Admin.Controllers
 
         public ActionResult Details(int? id)
         {
-            if (id == null )
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            
+
 
             var query = _OgrenciRepository.GetById(id.Value);
-           
+
 
             if (query == null)
                 return HttpNotFound();
@@ -95,8 +98,8 @@ namespace DersaneOtomasyon.Admin.Controllers
 
         }
 
-        
-        private  void AlanDoldur(object nesne = null)
+
+        private void AlanDoldur(object nesne = null)
         {
             var alanList = _AlanRepository.GetAll().ToList();
             var selectList = new SelectList(alanList, "AlanId", "AlanAdi", nesne);

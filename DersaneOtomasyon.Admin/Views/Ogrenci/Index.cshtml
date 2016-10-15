@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<DersaneOtomasyon.Data.Model.Ogrenci>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Öğrenci | Anasayfa";
 }
 
-<h2>Index</h2>
+<h2>Öğrenciler</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Yeni Öğrenci", "Create")
 </p>
 <table class="table">
     <tr>
@@ -22,6 +22,12 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Okul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgrenciTc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fiyat)
         </th>
         <th></th>
     </tr>
@@ -39,6 +45,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Okul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OgrenciTc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fiyat)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.OgrenciId }) |

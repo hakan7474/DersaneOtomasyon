@@ -7,13 +7,13 @@ namespace DersaneOtomasyon.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class para2 : IMigrationMetadata
+    public sealed partial class fiyatlar : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(para2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fiyatlar));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610150247448_para2"; }
+            get { return "201610150318489_fiyatlar"; }
         }
         
         string IMigrationMetadata.Source

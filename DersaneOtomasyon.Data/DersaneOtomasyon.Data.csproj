@@ -90,13 +90,9 @@
     <Compile Include="Migrations\201610150227234_para1.Designer.cs">
       <DependentUpon>201610150227234_para1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610150247448_para2.cs" />
-    <Compile Include="Migrations\201610150247448_para2.Designer.cs">
-      <DependentUpon>201610150247448_para2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610150258583_ogr_para.cs" />
-    <Compile Include="Migrations\201610150258583_ogr_para.Designer.cs">
-      <DependentUpon>201610150258583_ogr_para.cs</DependentUpon>
+    <Compile Include="Migrations\201610150318489_fiyatlar.cs" />
+    <Compile Include="Migrations\201610150318489_fiyatlar.Designer.cs">
+      <DependentUpon>201610150318489_fiyatlar.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
@@ -140,11 +136,8 @@
     <EmbeddedResource Include="Migrations\201610150227234_para1.resx">
       <DependentUpon>201610150227234_para1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610150247448_para2.resx">
-      <DependentUpon>201610150247448_para2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610150258583_ogr_para.resx">
-      <DependentUpon>201610150258583_ogr_para.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610150318489_fiyatlar.resx">
+      <DependentUpon>201610150318489_fiyatlar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

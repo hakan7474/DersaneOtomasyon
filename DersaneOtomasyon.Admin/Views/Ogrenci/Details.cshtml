@@ -1,10 +1,10 @@
 ﻿@model DersaneOtomasyon.Data.Model.Ogrenci
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detaylar";
 }
 
-<h2>Details</h2>
+<h2>Detaylar</h2>
 
 <div>
     <h4>Ogrenci</h4>
@@ -42,14 +42,25 @@
             @Html.DisplayFor(model => model.Okul)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciTc)
+        </dt>
 
         <dd>
-            
+            @Html.DisplayFor(model => model.OgrenciTc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OgrenciId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.OgrenciId }) |
+    @Html.ActionLink("Listeye Dön", "Index")
 </p>

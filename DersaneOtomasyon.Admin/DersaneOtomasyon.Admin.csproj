@@ -232,10 +232,12 @@
     <Content Include="Views\Alan\Edit.cshtml" />
     <Content Include="Views\Odeme\Index.cshtml" />
     <Content Include="Views\Odeme\Create.cshtml" />
+    <Content Include="Views\Ogrenci\Index.cshtml" />
+    <Content Include="Views\Ogrenci\Create.cshtml" />
+    <Content Include="Views\Ogrenci\Edit.cshtml" />
+    <Content Include="Views\Ogrenci\Details.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Ogrenci\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

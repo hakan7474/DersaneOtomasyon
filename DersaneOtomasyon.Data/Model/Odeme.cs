@@ -19,10 +19,11 @@ namespace DersaneOtomasyon.Data.Model
         public int TaksitNo { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
-        public double OdenenTutar { get; set; } 
+        public decimal Fiyat { get; set; }
 
-         
-         
+
+
+
         [Required]
         public int OgrenciId { get; set; }
 

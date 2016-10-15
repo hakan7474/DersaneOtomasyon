@@ -1,10 +1,10 @@
 ﻿@model DersaneOtomasyon.Data.Model.Ogrenci
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Yeni Öğrenci";
 }
 
-<h2>Create</h2>
+<h2>Yeni Öğrenci Ekle</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -31,19 +31,20 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Fiyat, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fiyat, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fiyat, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
-        <div class="form-group">
             @Html.LabelFor(model => model.Okul, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Okul, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Okul, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+ 
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fiyat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Fiyat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fiyat, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -64,12 +65,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Geri Dön", "Index")
 </div>
-
-
-@section scripts
-{
-    @Scripts.Render("~/budles/jqueryval")
-    
-}
