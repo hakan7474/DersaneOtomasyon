@@ -20,7 +20,7 @@ namespace DersaneOtomasyon.Data.Model
          [Required]
         public string OgrenciTc { get; set; }
         [Required]
-        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N}")]
         public decimal Fiyat { get; set; }
 
         public virtual ICollection<Odeme> Odeme { get; set; }

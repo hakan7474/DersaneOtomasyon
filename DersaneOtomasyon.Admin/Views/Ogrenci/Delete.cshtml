@@ -1,0 +1,72 @@
+﻿@model DersaneOtomasyon.Data.Model.Ogrenci
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ogrenci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alan.AlanAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alan.AlanAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciSoyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciSoyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Okul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Okul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OgrenciTc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OgrenciTc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
+</div>

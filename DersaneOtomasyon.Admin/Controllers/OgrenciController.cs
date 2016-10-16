@@ -32,7 +32,7 @@ namespace DersaneOtomasyon.Admin.Controllers
             return View();
         }
         [HttpPost
-            ,ValidateAntiForgeryToken]
+            , ValidateAntiForgeryToken]
         public ActionResult Create(Ogrenci ogrenci)
         {
             if (!ModelState.IsValid)
@@ -40,12 +40,12 @@ namespace DersaneOtomasyon.Admin.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-           
+
             _OgrenciRepository.Insert(ogrenci);
             _OgrenciRepository.Save();
             return RedirectToAction("Index");
         }
-         
+
 
         public ActionResult Details(int? id)
         {
@@ -65,7 +65,39 @@ namespace DersaneOtomasyon.Admin.Controllers
 
         }
 
-      
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var edit = _OgrenciRepository.GetById(id.Value);
+
+            if (edit==null)
+            {
+                return HttpNotFound();
+            }
+            AlanDoldur(edit.AlanId);
+            return View(edit);
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public ActionResult Edit(Ogrenci ogr)
+        {
+            if (ModelState.IsValid)
+            {
+                _OgrenciRepository.Update(ogr);
+                _OgrenciRepository.Save();
+            }
+            else
+            {
+                return new  HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            } 
+            return RedirectToAction("Index");
+        }
+
+
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -75,7 +107,7 @@ namespace DersaneOtomasyon.Admin.Controllers
 
             var find = _OgrenciRepository.GetById(id.Value);
 
-            if (find==null)
+            if (find == null)
             {
                 return HttpNotFound();
             }
@@ -83,12 +115,15 @@ namespace DersaneOtomasyon.Admin.Controllers
             return View(find);
         }
 
-        [HttpPost
-            ,ActionName("Delete")]
-        public ActionResult ConfirmedDelete(Ogrenci ogrenci)
+        [HttpPost,ValidateAntiForgeryToken,ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
         {
+            _OgrenciRepository.Delete(id.Value);
+            _OgrenciRepository.Save();
 
+            return RedirectToAction("Index");
         }
+      
 
         #region Alanları getir
         private void AlanDoldur(object nesne = null)
