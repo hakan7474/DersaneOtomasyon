@@ -1,0 +1,50 @@
+﻿@model DersaneOtomasyon.Data.Model.Odeme
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Odeme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ogrenci.OgrenciAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ogrenci.OgrenciAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OdemeAciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OdemeAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaksitNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaksitNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit","Odeme", new { id = Model.OdemeId }) |
+    @Html.ActionLink("Listeye Dön", "Index")
+</p>

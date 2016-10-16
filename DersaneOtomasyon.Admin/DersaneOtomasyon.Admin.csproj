@@ -237,6 +237,7 @@
     <Content Include="Views\Ogrenci\Create.cshtml" />
     <Content Include="Views\Ogrenci\Delete.cshtml" />
     <Content Include="Views\Ogrenci\Edit.cshtml" />
+    <Content Include="Views\Odeme\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -17,7 +17,6 @@ namespace DersaneOtomasyon.Admin.Controllers
         public HomeController(IOdemeRepository odemeRepository, IVeliRepository VeliRepository , IOgrenciRepository OgrenciRepository)
         {
             _odemeRepository = odemeRepository;
-          
             _ogrenciRepository = OgrenciRepository;
             _veliRepository = VeliRepository;
         }
@@ -28,7 +27,6 @@ namespace DersaneOtomasyon.Admin.Controllers
             MainView context = new MainView {
                 ToplamBolum = _odemeRepository.Count(),
                 ToplamOgrenci = _ogrenciRepository.Count(),
-
                 ToplamOdeme =_veliRepository.Count()
             };
             return View(context);

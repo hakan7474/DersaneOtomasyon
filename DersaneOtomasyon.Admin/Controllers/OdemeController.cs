@@ -54,5 +54,22 @@ namespace DersaneOtomasyon.Admin.Controllers
             _odemeRepository.Save();
             return RedirectToAction("Index",new {id=id.Value });
         }
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); 
+            }
+
+            var getir = _odemeRepository.GetById(id.Value);
+
+            if (getir == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(getir);
+        }
     }
 }

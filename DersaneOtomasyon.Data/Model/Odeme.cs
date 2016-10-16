@@ -18,7 +18,7 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         public int TaksitNo { get; set; }
         [Required]
-        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:N}")]
         public decimal Fiyat { get; set; }
 
 
