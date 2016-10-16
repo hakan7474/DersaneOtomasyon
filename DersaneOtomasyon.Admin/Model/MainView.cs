@@ -10,7 +10,7 @@ namespace DersaneOtomasyon.Admin.Model
         public int ToplamBolum { get; set; }
         public int ToplamOgrenci { get; set; }
         public int ToplamOkul { get; set; }
-        public int ToplamVeli { get; set; }
+        public int ToplamOdeme { get; set; }
     }
 
 }

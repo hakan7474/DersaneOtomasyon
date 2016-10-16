@@ -10,13 +10,13 @@ namespace DersaneOtomasyon.Admin.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IAlanRepository _alanRepository;
+        private readonly IOdemeRepository _odemeRepository;
        
         private readonly IOgrenciRepository _ogrenciRepository;
         private readonly IVeliRepository _veliRepository;
-        public HomeController(IAlanRepository AlanRepository, IVeliRepository VeliRepository , IOgrenciRepository OgrenciRepository)
+        public HomeController(IOdemeRepository odemeRepository, IVeliRepository VeliRepository , IOgrenciRepository OgrenciRepository)
         {
-            _alanRepository = AlanRepository;
+            _odemeRepository = odemeRepository;
           
             _ogrenciRepository = OgrenciRepository;
             _veliRepository = VeliRepository;
@@ -26,10 +26,10 @@ namespace DersaneOtomasyon.Admin.Controllers
         public ActionResult Index()
         {
             MainView context = new MainView {
-                ToplamBolum = _alanRepository.Count(),
+                ToplamBolum = _odemeRepository.Count(),
                 ToplamOgrenci = _ogrenciRepository.Count(),
-                
-                ToplamVeli=_veliRepository.Count()
+
+                ToplamOdeme =_veliRepository.Count()
             };
             return View(context);
         }

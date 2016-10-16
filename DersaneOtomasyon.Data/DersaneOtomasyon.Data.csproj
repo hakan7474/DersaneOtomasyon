@@ -94,6 +94,10 @@
     <Compile Include="Migrations\201610150318489_fiyatlar.Designer.cs">
       <DependentUpon>201610150318489_fiyatlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610160437055_s.cs" />
+    <Compile Include="Migrations\201610160437055_s.Designer.cs">
+      <DependentUpon>201610160437055_s.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -138,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610150318489_fiyatlar.resx">
       <DependentUpon>201610150318489_fiyatlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610160437055_s.resx">
+      <DependentUpon>201610160437055_s.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

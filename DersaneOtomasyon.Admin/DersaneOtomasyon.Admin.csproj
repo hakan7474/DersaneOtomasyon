@@ -233,9 +233,8 @@
     <Content Include="Views\Odeme\Index.cshtml" />
     <Content Include="Views\Odeme\Create.cshtml" />
     <Content Include="Views\Ogrenci\Index.cshtml" />
-    <Content Include="Views\Ogrenci\Create.cshtml" />
-    <Content Include="Views\Ogrenci\Edit.cshtml" />
     <Content Include="Views\Ogrenci\Details.cshtml" />
+    <Content Include="Views\Ogrenci\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
