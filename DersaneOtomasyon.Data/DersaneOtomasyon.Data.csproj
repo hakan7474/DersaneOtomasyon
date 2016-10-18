@@ -98,6 +98,10 @@
     <Compile Include="Migrations\201610160437055_s.Designer.cs">
       <DependentUpon>201610160437055_s.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610181728242_Odemetarih.cs" />
+    <Compile Include="Migrations\201610181728242_Odemetarih.Designer.cs">
+      <DependentUpon>201610181728242_Odemetarih.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Alan.cs" />
     <Compile Include="Model\Odeme.cs" />
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610160437055_s.resx">
       <DependentUpon>201610160437055_s.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181728242_Odemetarih.resx">
+      <DependentUpon>201610181728242_Odemetarih.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

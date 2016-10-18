@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DersaneOtomasyon.Data.Model.Odeme>
+
+@{
+    ViewBag.Title = "OdemeListele";
+}
+
+<h2>Ödeme Listele</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model=>model.Ogrenci.OgrenciTc)</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ogrenci.OgrenciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OdemeAciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaksitNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(model => item.Ogrenci.OgrenciTc)</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ogrenci.OgrenciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OdemeAciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaksitNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fiyat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OdemeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OdemeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OdemeId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -18,6 +18,12 @@ namespace DersaneOtomasyon.Admin.Controllers
             _ogrenciRepository = ogrenciRepository;
             _odemeRepository = odemeRepository;
         }
+
+        public ActionResult OdemeListele()
+        {
+            var list = _odemeRepository.GetAll().OrderByDescending(x => x.Ogrenci.OgrenciTc).ToList();
+          return View(list);
+        }
         public ActionResult Index(int? id)
         {
             if (id == null)

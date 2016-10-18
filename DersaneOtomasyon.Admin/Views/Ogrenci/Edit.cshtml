@@ -73,6 +73,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
-    @Html.ActionLink("Ödeme", "Index","Odeme",new { id = Model.OgrenciId} , new { })
+    @Html.ActionLink("Back to List", "Index")|
+    @Html.ActionLink("Ödeme Ekranı", "Index","Odeme",new { id = Model.OgrenciId} , new { })|
+    @Html.ActionLink("Ögrenci Veli","Index","Veli",new { id =Model.OgrenciId},new { })
 </div>

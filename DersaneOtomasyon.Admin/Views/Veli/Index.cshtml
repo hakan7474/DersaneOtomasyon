@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DersaneOtomasyon.Data.Model.Veli>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.SelectedOgrenci.OgrenciAdi isimli Ogrenci</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ogrenci.OgrenciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VeliAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VeliAdres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VeliTc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ogrenci.OgrenciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VeliAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VeliAdres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VeliTc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VeliId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VeliId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VeliId })
+        </td>
+    </tr>
+}
+
+</table>

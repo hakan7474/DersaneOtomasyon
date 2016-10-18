@@ -20,7 +20,8 @@ namespace DersaneOtomasyon.Data.Model
         [Required]
         [DisplayFormat(DataFormatString = "{0:N}")]
         public decimal Fiyat { get; set; }
-
+        [Required]
+        public DateTime OdemeTarihi { get; set; }
 
 
 
