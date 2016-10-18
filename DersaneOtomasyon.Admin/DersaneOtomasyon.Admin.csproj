@@ -238,6 +238,8 @@
     <Content Include="Views\Ogrenci\Delete.cshtml" />
     <Content Include="Views\Ogrenci\Edit.cshtml" />
     <Content Include="Views\Odeme\Details.cshtml" />
+    <Content Include="Views\Odeme\Edit.cshtml" />
+    <Content Include="Views\Odeme\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
